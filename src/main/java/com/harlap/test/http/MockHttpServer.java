@@ -15,6 +15,12 @@
  */
 package com.harlap.test.http;
 
+import org.simpleframework.http.Request;
+import org.simpleframework.http.Response;
+import org.simpleframework.http.core.Container;
+import org.simpleframework.transport.connect.Connection;
+import org.simpleframework.transport.connect.SocketConnection;
+
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.InetSocketAddress;
@@ -22,15 +28,9 @@ import java.net.SocketAddress;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.simpleframework.http.Request;
-import org.simpleframework.http.Response;
-import org.simpleframework.http.core.Container;
-import org.simpleframework.transport.connect.Connection;
-import org.simpleframework.transport.connect.SocketConnection;
-
 public class MockHttpServer {
 	public enum Method {
-		GET, POST, PUT, DELETE;
+		GET, POST, PUT, DELETE
 	}
 
 	private class ExpectedRequest {
